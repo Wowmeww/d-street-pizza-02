@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native';
-import { router } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +10,8 @@ const Login = () => {
     const [showResetPassword, setShowResetPassword] = useState(false);
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
+    const router = useRouter();
 
     const login = async () => {
         try {
@@ -40,7 +42,7 @@ const Login = () => {
                 setError('Invalid email or password');
             }
         } catch (error) {
-            setError('Login Failed. Please try again.');
+            setError('Login Failed. Please try again.', error);
         }
     };
 

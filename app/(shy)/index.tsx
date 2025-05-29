@@ -1,9 +1,8 @@
 import { Image } from 'expo-image';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import { Text } from '@react-navigation/elements';
 import { useNavigation } from '@react-navigation/native';
-import { TouchableOpacity } from 'react-native';
 
 // Import the type for your navigation stack
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';

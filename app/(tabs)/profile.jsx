@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert, ScrollView, Animated } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
-import { router } from 'expo-router';
+import { useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { Alert, Animated, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 const aboutText = `D'Street Pizza is a vibrant and community-focused pizzeria dedicated to delivering high-quality, flavorful pizzas made with fresh ingredients. Our mission is to provide a welcoming environment where customers can enjoy delicious, handcrafted pizzas in a friendly and relaxed setting. We offer a diverse menu featuring both classic favorites and innovative creations to satisfy a wide range of tastes. At D'Street Pizza, we prioritize customer satisfaction, quality, and consistency in every slice we serve. Our team is passionate about creating a memorable dining experience and building lasting relationships with our customers and community. Whether dine-in, takeout, or delivery, D'Street Pizza is committed to bringing people together through great food.`;
 
@@ -13,6 +13,8 @@ const Profile = () => {
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
   const [aboutVisible, setAboutVisible] = useState(false);
+
+  const router = useRouter();
 
   // For animated slide up effect
   const [aboutBoxTop] = useState(new Animated.Value(0));
