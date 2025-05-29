@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "d-street-pizz-02",
+    "name": "d-street-pizza",
     "slug": "d-street-pizz-02",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.wowmeww.dstreetpizz02"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "63cd40d8-a33a-45c5-a842-15ac631faf66"
+      }
     }
   }
 }
